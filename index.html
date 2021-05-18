@@ -1,0 +1,384 @@
+<!-- This entire file shamelessly stolen as-is from Jon Barron's website: http://www.cs.berkeley.edu/~barron/ -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0035)http://www.cs.berkeley.edu/~barron/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
+  <style type="text/css">
+    /* Color scheme stolen from Sergey Karayev */
+    a {
+    color: #1772d0;
+    text-decoration:none;
+    }
+    a:focus, a:hover {
+    color: #f09228;
+    text-decoration:none;
+    }
+    body,td,th,tr,p,a {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 14px
+    }
+    strong {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 14px;
+    }
+    heading {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 22px;
+    }
+    papertitle {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 700
+    }
+    name {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 32px;
+    }
+    .one
+    {
+    width: 160px;
+    height: 160px;
+    position: relative;
+    }
+    .two
+    {
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    transition: opacity .2s ease-in-out;
+    -moz-transition: opacity .2s ease-in-out;
+    -webkit-transition: opacity .2s ease-in-out;
+    }
+    .fade {
+     transition: opacity .2s ease-in-out;
+     -moz-transition: opacity .2s ease-in-out;
+     -webkit-transition: opacity .2s ease-in-out;
+    }
+  </style>
+  <link rel="icon" type="image/png" href="http://www.eecs.berkeley.edu/~rakelly/berkeley_seal.png">
+  <title>Kate Rakelly</title>
+
+  <link href="./jon_barron_website_files/css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+  <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
+    <tbody><tr>
+    <td>
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+      <tbody><tr>
+        <td width="67%" valign="middle">
+        <p align="center">
+          <name>Kate Rakelly</name><br>
+          </p>
+        <p>I am a PhD candidate in <a href="https://bair.berkeley.edu/">BAIR</a> at <a href="http://www.eecs.berkeley.edu/">UC Berkeley</a>, where I am advised by <a href="https://people.eecs.berkeley.edu/~svlevine/">Sergey Levine</a>. During my PhD I've also worked with <a href="http://www.eecs.berkeley.edu/~efros/">Alyosha Efros</a> and <a href="https://people.eecs.berkeley.edu/~trevor/">Trevor Darrell</a>.
+        </p>
+        <p>
+          Previously, I graduated with a Bachelor's in EECS from UC Berkeley, where I did undergraduate research with <a href="http://www.eecs.berkeley.edu/~shiry/">Shiry Ginosar</a> and <a href="http://www.eecs.berkeley.edu/~efros/">Alyosha Efros</a> in computer vision as well as <a href="http://www-bcf.usc.edu/~insoonya/">Insoon Yang</a> and <a href="hhttp://www.eecs.berkeley.edu/Faculty/Homepages/tomlin.html">Claire Tomlin</a> in control.
+        </p>
+        <p align="center">
+<a href="mailto:rakelly@eecs.berkeley.edu">Email</a> &nbsp;/&nbsp;
+<a href="./Rakelly_CV.pdf">CV</a> &nbsp;/&nbsp;
+<a href="https://scholar.google.com/citations?user=e1P1rNkAAAAJ&hl=en">Google Scholar</a> &nbsp;/&nbsp;
+<a href="https://www.linkedin.com/in/krakelly"> LinkedIn </a>
+        </p>
+        </td>
+        <td width="33%">
+        <img src="./kate_kauai.png">
+        </td>
+      </tr>
+      </tbody></table>
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+      <tbody><tr>
+        <td width="100%" valign="middle">
+          <heading>Research</heading>
+          <p>
+          In recent years, AI has excelled in training extremely specialized agents to solve specific problems, from mastering games to achieving impressive classification accuracy on benchmark datasets. I view broadening the skills of these specialist agents as an exciting frontier. To achieve this, agents must be able to re-use knowledge gained in one setting and apply it in another. To this end, I've most recently worked on meta-reinforcement learning algorithms, improving performance and sample efficieny with PEARL and demonstrating that meta-RL is applicable to real-world robotics with MELD. Prior to that, I investigated the same ideas in the context of computer vision, designing an algorithm for few-shot image segmentation and an adaptive computation scheme for image segmentation in videos. In undergrad, I contributed to a project applying semi-supervised learning techniques to historical photographs to discover trends in fashion and hairstyle over the past century.
+          </p>
+        </td>
+      </tr>
+      </tbody></table>
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+
+        <tbody><tr onmouseout="meld_stop()" onmouseover="meld_start()">
+          <td width="25%">
+
+            <div class="one">
+                <div class="two" id="meld_image" style="opacity: 0;"><img src="./widowx_2.jpg"></div>
+                <img src="./widowx_1.jpg">
+            </div>
+            <script type="text/javascript">
+            function meld_start() {
+              document.getElementById('meld_image').style.opacity = "1";
+            }
+            function meld_stop() {
+              document.getElementById('meld_image').style.opacity = "0";
+            }
+            meld_stop()
+            </script>
+
+              </td>
+              <td valign="top" width="75%">
+              <p><a href="https://arxiv.org/abs/2010.13957">
+        <papertitle>MELD: Meta-Reinforcement Learning from Images via Latent State Models</papertitle></a><br>
+    Tony Z. Zhao, <a href="https://people.eecs.berkeley.edu/~nagaban2/">Anusha Nagabandi*</a>, <strong>Kate Rakelly*</strong>, <a href="https://ai.stanford.edu/~cbfinn/">Chelsea Finn</a>, <a href="http://people.eecs.berkeley.edu/~svlevine/">Sergey Levine</a><br>
+                <em>CoRL</em>, 2020<br>
+                <a href="https://github.com/tonyzhaozh/meld">Code</a>, 
+                <a href="https://sites.google.com/view/meld-lsm/home">Website</a>
+              </p><p></p>
+                We leverage the perspective of meta-learning as task inference to show that latent state models can also perform meta-learning given an appropriately defined observation space. Building on this insight, we develop meta-RL with latent dynamics (MELD), an algorithm for meta-RL from images that performs inference in a latent state model to quickly acquire new skills given observations and rewards. We demonstrate that MELD enables the WidowX robotic arm to quickly insert an Ethernet cable into the correct port at a novel location and orientation given only a task completion reward.
+              </p><p></p>
+              <p></p>
+              </td>
+            </tr>
+        </tbody></table>
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+
+        <tbody><tr onmouseout="pearl_stop()" onmouseover="pearl_start()">
+          <td width="25%">
+
+            <div class="one">
+                <div class="two" id="pearl_image" style="opacity: 0;"><img src="./pearl_after.png"></div>
+                <img src="./pearl_before.png">
+            </div>
+            <script type="text/javascript">
+            function pearl_start() {
+              document.getElementById('pearl_image').style.opacity = "1";
+            }
+            function pearl_stop() {
+              document.getElementById('pearl_image').style.opacity = "0";
+            }
+            pearl_stop()
+            </script>
+
+              </td>
+              <td valign="top" width="75%">
+              <p><a href="https://arxiv.org/abs/1903.08254v1">
+        <papertitle>Efficient Off-Policy Meta-Reinforcement Learning via Probabilistic Context Variables</papertitle></a><br>
+    <strong>Kate Rakelly*</strong>, Aurick Zhou*, Deirdre Quillen, <a href="https://ai.stanford.edu/~cbfinn/">Chelsea Finn</a>, <a href="http://people.eecs.berkeley.edu/~svlevine/">Sergey Levine</a><br>
+                <em>ICML</em>, 2019<br>
+                <a href="https://github.com/katerakelly/oyster">Code</a>, 
+                <a href="https://docs.google.com/presentation/d/1GpRUU4iJiAAm4JAbZJvEVqRCRV3yUf4THtfd-DMqUBw/edit?usp=sharing">Slides</a>
+              </p><p></p>
+              Leverage off-policy learning and a probabilistic belief over the task to make meta-RL 20-100X more sample efficient. PEARL performs online probabilistic filtering of latent task variables to infer how to solve a new task from small amounts of experience. This probabilistic interpretation enables posterior sampling for structured and efficient exploration during adaptation. Unlike prior approaches, our method integrates easily with existing off-policy RL algorithms, greatly improving meta-training sample efficiency.
+              </p><p></p>
+              <p></p>
+              </td>
+            </tr>
+        </tbody></table>
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+
+        <tbody><tr onmouseout="guided_stop()" onmouseover="guided_start()">
+          <td width="25%">
+
+            <div class="one">
+                <div class="two" id="guided_image" style="opacity: 0;"><img src="./guided_after.png"></div>
+                <img src="./guided_before.png">
+            </div>
+            <script type="text/javascript">
+            function guided_start() {
+              document.getElementById('guided_image').style.opacity = "1";
+            }
+            function guided_stop() {
+              document.getElementById('guided_image').style.opacity = "0";
+            }
+            guided_stop()
+            </script>
+
+              </td>
+              <td valign="top" width="75%">
+              <p><a href="https://arxiv.org/abs/1806.07373">
+        <papertitle>Few-Shot Segmentation Propagation with Guided Networks</papertitle></a><br>
+    <strong>Kate Rakelly*</strong>, <a href="http://imaginarynumber.net/">Evan Shelhamer*</a>, <a href="https://people.eecs.berkeley.edu/~trevor/">Trevor Darrell</a>, <a href="https://people.eecs.berkeley.edu/~efros/">Alyosha Efros</a>, <a href="http://people.eecs.berkeley.edu/~svlevine/">Sergey Levine</a><br>
+                <em>Preprint</em>, 2018<br>
+                <a href="https://github.com/shelhamer/revolver">Code</a>
+              </p><p></p>
+              Few-shot learning meets segmentation: given a few labeled pixels from few images, segment new images accordingly. Our guided network extracts a latent task representation from any amount of supervision and is optimized end-to-end for fast, accurate segmentation of new inputs. We show state-of-the-art results for speed and amount of supervision on three segmentation problems that are usually treated separately: interactive, semantic, and video object segmentation. Our method is fast enough to perform real-time interactive video object segmentation.
+              </p><p></p>
+              <p></p>
+              </td>
+            </tr>
+        </tbody></table>
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+
+        <tbody><tr onmouseout="clock_stop()" onmouseover="clock_start()">
+          <td width="25%">
+
+            <div class="one">
+                <div class="two" id="clock_image" style="opacity: 0;"><img src="./clockwork_after.png"></div>
+                <img src="./clockwork_before.png">
+            </div>
+            <script type="text/javascript">
+            function clock_start() {
+              document.getElementById('clock_image').style.opacity = "1";
+            }
+            function clock_stop() {
+              document.getElementById('clock_image').style.opacity = "0";
+            }
+            clock_stop()
+            </script>
+
+              </td>
+              <td valign="top" width="75%">
+              <p><a href="https://arxiv.org/abs/1608.03609">
+        <papertitle>Clockwork Convnets for Video Semantic Segmentation</papertitle></a><br>
+        <a href="http://imaginarynumber.net/">Evan Shelhamer*</a>, <strong>Kate Rakelly*</strong>, <a href="http://cs.stanford.edu/~jhoffman/">Judy Hoffman*</a>, <a href="https://people.eecs.berkeley.edu/~trevor/">Trevor Darrell</a><br>
+                <em>Video Semantic Segmentation Workshop at European Conference in Computer Vision (ECCV)</em>, 2016<br>
+                <a href="https://github.com/shelhamer/clockwork-fcn">Code</a>
+              </p><p></p>
+              <p> A fast video recognition framework that relies on
+two key observations: 1) while pixels may change rapidly from frame to frame,
+the semantic content of a scene evolves more slowly, and 2) execution can be
+viewed as an aspect of architecture, yielding purpose-fit computation schedules
+for networks. We define a novel family of "clockwork" convnets driven by fixed
+or adaptive clock signals that schedule the processing of different layers at different
+update rates according to their semantic stability.
+              </p><p></p>
+              <p></p>
+              </td>
+            </tr>
+        </tbody></table>
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+
+
+        <tbody><tr onmouseout="bs_stop()" onmouseover="bs_start()">
+          <td width="25%">
+
+            <div class="one">
+                <div class="two" id="bs_image" style="opacity: 0;"><img src="./yearbook_after.png"></div>
+                <img src="./yearbook_before.png">
+            </div>
+            <script type="text/javascript">
+            function bs_start() {
+              document.getElementById('bs_image').style.opacity = "1";
+            }
+            function bs_stop() {
+              document.getElementById('bs_image').style.opacity = "0";
+            }
+            bs_stop()
+            </script>
+
+              </td>
+              <td valign="top" width="75%">
+              <p><a href="http://ieeexplore.ieee.org/abstract/document/7915779/">
+        <papertitle>A Century of Portraits: A Visual Historical Record of American High School Yearbooks</papertitle></a><br>
+        <a href="http://www.eecs.berkeley.edu/~shiry/">Shiry Ginosar</a>, <strong>Kate Rakelly</strong>, <a href="http://www.sarahmsachs.com/">Sarah Sachs</a>, <a href="https://www.linkedin.com/in/brian-yin-b8314386">Brian Yin</a>, <a href="http://www.eecs.berkeley.edu/~efros/">Alyosha Efros</a> <br>
+		<em>IEEE Transactions on Computational Imaging</em>, 2017 <br>
+                <em>Extreme Imaging Workshop, International Conference on Computer Vision (ICCV)</em>, 2015 <br>
+                <a href="http://www.eecs.berkeley.edu/~shiry/projects/yearbooks/yearbooks.html">Project Page</a> <br>
+                <a href="https://github.com/katerakelly/yearbook-dating">Portrait Dating Code</a>
+              </p><p></p>
+              <p>What were the tell-tale fashions of the 1950s? Did everyone in the 70s really have long hair? In this age of selfies, is it true that we smile in photos more than we used to? And can a CNN pick up on all these trends to accurately date an old portrait? We address these questions and many others using data-driven semi-supervised learning techniques on a novel dataset of American high school yearbook photos from the past 100 years.
+              </p><p></p>
+              <p></p>
+              </td>
+            </tr>
+        </tbody></table>
+      
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+      <tbody><tr>
+        <td>
+        <heading>Talks</heading>
+        </td>
+      </tr>
+      </tbody></table>
+      <table width="100%" align="center" border="0" cellpadding="20">
+      <tbody><tr>
+        <td width="75%" valign="center">
+        <p> <a href="https://www.youtube.com/watch?v=4qH_h5_V3O4&list=PLkFD6_40KJIwhWJpGazJ9VSj9CFMkb79A&index=19">An Overview of Meta-Reinforcement Learning</a> - guest lecture in CS294 at UC Berkeley</p>
+        <p> <a href="https://www.youtube.com/watch?v=k6rL4wzykGA&list=PLoROMvodv4rMC6zfYmnD7UG3LVvwaITY5&index=7">Exploration in Meta-RL</a> - guest lecture in CS330 at Stanford University</p>
+        <p> Efficient Meta-RL with Probabilistic Context Embeddings - contributed talk to the Workshop on Structure and Priors in RL at ICLR 2019</p>
+        </p>
+        </td>
+      </tr>
+      </tbody></table>
+
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+      <tbody><tr>
+        <td>
+        <heading>Writing</heading>
+        </td>
+      </tr>
+      </tbody></table>
+      <table width="100%" align="center" border="0" cellpadding="20">
+      <tbody><tr>
+        <td width="75%" valign="center">
+        <p><a href="https://bair.berkeley.edu/blog/2019/06/10/pearl/">Learning to Learn with Probabilistic Task Embeddings</a> - on the BAIR blog about our work on off-policy meta-RL.
+          </p>
+        </p>
+        </td>
+      </tr>
+      </tbody></table>
+
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+      <tbody><tr>
+        <td>
+        <heading>Code</heading>
+        </td>
+      </tr>
+      </tbody></table>
+      <table width="100%" align="center" border="0" cellpadding="20">
+      <tbody><tr>
+        <td width="75%" valign="center">
+        <p>A collection of collateral damage from doing research that might be useful to others.</p>
+        <p><a href="https://github.com/katerakelly/pytorch-maml">pytorch-maml</a> - a PyTorch implementation of <a href="https://arxiv.org/abs/1703.03400">Model-Agnostic Meta Learning</a> for supervised learning.
+          </p>
+        </p>
+        </td>
+      </tr>
+      </tbody></table>
+
+    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+      <tbody><tr>
+        <td>
+        <heading>Teaching</heading>
+        </td>
+      </tr>
+      </tbody></table>
+      <table width="100%" align="center" border="0" cellpadding="20">
+      <tbody><tr>
+        <td width="75%" valign="center">
+        <p>
+          <papertitle>CS294-112 - Fall 2018 (Head Teaching Assistant)</papertitle>
+          <p> <i> <a href="http://rail.eecs.berkeley.edu/deeprlcourse/">Deep Reinforcement Learning</a> </i> is a special topics course covering modern deep reinforcement learning techniques.
+          </p>
+        </p>
+        <p>
+          <papertitle>CS70 - Summer 2014 (Teaching Assistant)</papertitle>
+          <p> <i>Discrete Mathematics for Computer Science</i> covers proof techniques, modular arithmetic, polynomials, and probability.
+          </p>
+        </p>
+        <p>
+          <papertitle>EE40 - Summer 2013 (Teaching Assistant)</papertitle>
+          <p> <i>Introduction to Circuits</i> covers analyzing, designing, and building electronic circuits using op amps and passive components. (Note this class along with EE20 have been replaced by the EE16A/B series as of Fall 2015.)</p>
+        </p>
+        </td>
+      </tr>
+      </tbody></table>
+
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+      <tbody><tr>
+        <td>
+        <br>
+        <p align="right"><font size="2">
+          <a href="http://www.cs.berkeley.edu/~barron/">(this guy makes a nice wesbite)</a>
+        </td>
+      </tr>
+      </tbody></table>
+      <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+          document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+      </script><script src="./jon_barron_website_files/ga.js" type="text/javascript"></script> <script type="text/javascript">
+      try {
+          var pageTracker = _gat._getTracker("UA-7580334-1");
+          pageTracker._trackPageview();
+          } catch(err) {}
+      </script>
+    </td>
+    </tr>
+  </tbody></table>
+
+
+</body></html>
