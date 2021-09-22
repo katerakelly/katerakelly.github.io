@@ -101,6 +101,38 @@
       </tbody></table>
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
 
+        <tbody><tr onmouseout="mi_stop()" onmouseover="mi_start()">
+          <td width="25%">
+
+            <div class="one">
+                <div class="two" id="mi_image" style="opacity: 0;"><img src="./mi_after.png"></div>
+                <img src="./mi_before.png">
+            </div>
+            <script type="text/javascript">
+            function mi_start() {
+              document.getElementById('mi_image').style.opacity = "1";
+            }
+            function mi_stop() {
+              document.getElementById('mi_image').style.opacity = "0";
+            }
+            mi_stop()
+            </script>
+
+              </td>
+              <td valign="top" width="75%">
+              <p><a href="https://arxiv.org/abs/2106.07278">
+        <papertitle>Which Mutual-Information Representation Learning Objectives are Sufficient for Control?</papertitle></a><br>
+    <strong>Kate Rakelly</strong>, <a href="https://abhishekunique.github.io/">Abhishek Gupta</a>, <a href="https://sites.google.com/view/carlosflorensa">Carlos Florensa</a>, <a href="http://people.eecs.berkeley.edu/~svlevine/">Sergey Levine</a><br>
+                <em>Preprint</em>, 2021<br>
+              </p><p></p>
+              Unsupervised representation learning techniques can be used to extract compact state representations from observations, making the RL problem easier and more tractable. Recently, contrastive learning methods that learn lossy representations and can be interpreted as maximizing mutual information objectives have proven effective and popular. However, are the learned representations guaranteed to be capable of learning and representing the optimal policy? In other words, might they inadvertantly discard needed information for control? We present a framework for analysis and seek to answer this question for several popular and representative objectives.
+              </p><p></p>
+              <p></p>
+              </td>
+            </tr>
+        </tbody></table>
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+
         <tbody><tr onmouseout="meld_stop()" onmouseover="meld_start()">
           <td width="25%">
 
@@ -125,7 +157,7 @@
     <a href="https://tonyzhaozh.github.io/">Tony Z. Zhao*</a>, <a href="https://people.eecs.berkeley.edu/~nagaban2/">Anusha Nagabandi*</a>, <strong>Kate Rakelly*</strong>, <a href="https://ai.stanford.edu/~cbfinn/">Chelsea Finn</a>, <a href="http://people.eecs.berkeley.edu/~svlevine/">Sergey Levine</a><br>
                 <em>CoRL</em>, 2020<br>
                 <a href="https://github.com/tonyzhaozh/meld">Code</a>,
-                <a href="https://sites.google.com/view/meld-lsm/home">Website</a>
+                <a href="https://sites.google.com/view/meld-lsm/home">Website</a>,
                 <a href="https://youtu.be/P7Z68dRvne4">Video</a>
               </p><p></p>
                 We leverage the perspective of meta-learning as task inference to show that latent state models can also perform meta-learning given an appropriately defined observation space. Building on this insight, we develop meta-RL with latent dynamics (MELD), an algorithm for meta-RL from images that performs inference in a latent state model to quickly acquire new skills given observations and rewards. We demonstrate that MELD enables the WidowX robotic arm to quickly insert an Ethernet cable into the correct port at a novel location and orientation given only a task completion reward.
